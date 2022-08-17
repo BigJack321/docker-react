@@ -1,0 +1,4 @@
+1. Create react app using react template
+2. Write Dockerfile.dev and docker-compose.yml for development purpose
+3. In docker-compose we ensure that our project will be tested, and creates volumes so we won't need
+to rebuild image every time made some changes in source code.
