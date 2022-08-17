@@ -8,3 +8,23 @@ before_install:
 
 script:
   - docker run -e CI=true bigjack213/docker-react npm run test
+
+deploy:
+  # a name of hosting provider
+  provider: elasticbeanstalk
+  # selected region, can be found in URL of our website
+  region: "eu-central-1"
+  # name of an app
+  app: "docker-react"
+  # name of an Environment
+  env: "Dockerreact-env-1"
+  # a hard drive on beanstalk in which travis will put our zipped files
+  bucket_name: "elasticbeanstalk-eu-central-1-041202602675"
+  # path to our project in bucker
+  bucket_path: "docker-react"
+  # DEPLOY only if branch is "master"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  # preferable to put the variable inside quotes
+  secret_access_key: "$AWS_SECRET_KEY"

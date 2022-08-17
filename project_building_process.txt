@@ -2,3 +2,10 @@
 2. Write Dockerfile.dev and docker-compose.yml for development purpose
 3. In docker-compose we ensure that our project will be tested, and creates volumes so we won't need
 to rebuild image every time made some changes in source code.
+
+4. Next we configured travis CI and AWS,
+5. We connected travis CI to our github acc and create new .travis.yml file and in there we made some configuration
+6. Then connected credit card to AWS service and choose a free trail, created elastic beanstalk app and environment,
+created user and gave him full admin privileges
+7. After creating user, we pasted his "Access key ID" and "Secret access key" in env variables on travis ci page - profile icon, setting,  Environment Variables
+8. Include keys in .travis.yml file
